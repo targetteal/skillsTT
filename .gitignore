@@ -1,0 +1,14 @@
+# Node e artefatos de execução
+node_modules/
+out/
+dist/
+*.log
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Sistema
+.DS_Store

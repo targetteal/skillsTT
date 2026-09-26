@@ -1,0 +1,521 @@
+{
+  "repository": "targetteal/skillsTT",
+  "description": "Skills de agente da Target Teal e do Clube dos Agentes de Mudança",
+  "skills": [
+    "clubett-identidade-visual",
+    "motion-design",
+    "tt-editorial",
+    "tt-instagram",
+    "tt-visual"
+  ],
+  "skill_count": 5,
+  "generated_at": "2026-09-26T12:52:18-03:00",
+  "generated_from": "pacote TT Skills 0.1.0 + repo targetteal/clubett-identidade-visual@3dc5ed9 + skill motion-design 1.1.0 (c.a.m@08e076a)",
+  "files": [
+    {
+      "path": ".gitignore",
+      "bytes": 131,
+      "sha256": "15610b828d295529d3b5b108e62f685a45763f4ec8520ebf6da08dbfe4322b18"
+    },
+    {
+      "path": "FONTES.md",
+      "bytes": 4464,
+      "sha256": "b24eac2f38dee026041f6690bb7bdefa77804155b7d680769b27023a73265baa"
+    },
+    {
+      "path": "LICENSE.md",
+      "bytes": 1708,
+      "sha256": "bf5ca00be9abc40ff9a2594cdf97cbcc14acbecbfe0c0074afce0de4163cc87c"
+    },
+    {
+      "path": "PROCEDENCIA.md",
+      "bytes": 3889,
+      "sha256": "68ea854e7688877c4c20361884e96fcd4b367a6b4f782d23b7665273cc9a76a9"
+    },
+    {
+      "path": "README.md",
+      "bytes": 5981,
+      "sha256": "78c1d69ee39f6bce3d3546aa9bc688d36290c248ae227b22c6d02354a1626953"
+    },
+    {
+      "path": "TESTES.md",
+      "bytes": 2364,
+      "sha256": "f78612cb7cd055c7530c6b59496001ebd7fba0e8530e0d9605b522d35ae4ff2c"
+    },
+    {
+      "path": "evals/README.md",
+      "bytes": 2506,
+      "sha256": "83cbd2617d2b8ba8d22593a2bfdb1cdd0bf1cb0164fb531fa1f50711fbd3af19"
+    },
+    {
+      "path": "evals/casos.json",
+      "bytes": 9992,
+      "sha256": "9685e85ecc612c4f9cdb119fc2751bf568c9e860e25bcb9387192147db53549b"
+    },
+    {
+      "path": "requirements-dev.txt",
+      "bytes": 21,
+      "sha256": "d5bcf2b81a028b2360c7f72022f84c1f606f208eb1bc1eeb2cadfb74cd2504c9"
+    },
+    {
+      "path": "skills/clubett-identidade-visual/SKILL.md",
+      "bytes": 3737,
+      "sha256": "ff7c1ea0029b349c0d8ce6c246d2fc3dd1675856a98352dc90ffa9a24b211387"
+    },
+    {
+      "path": "skills/clubett-identidade-visual/assets/applications/social-card.png",
+      "bytes": 1160721,
+      "sha256": "e08e3be4889a227b1921ab8b04671a18586ad7668be41f2b081de5a72180f9d0"
+    },
+    {
+      "path": "skills/clubett-identidade-visual/assets/identity/club-crew-mark.png",
+      "bytes": 682292,
+      "sha256": "7d4664087298a75284ee6de8cc32be4cea2153415505c98a373c877ae8d7f556"
+    },
+    {
+      "path": "skills/clubett-identidade-visual/assets/identity/club-emblem.png",
+      "bytes": 169608,
+      "sha256": "195e93d992489dc70933952cbf9828bdcc20dca19fe7d3c2de4484d00c0cef06"
+    },
+    {
+      "path": "skills/clubett-identidade-visual/assets/identity/target-teal-logo-dark.png",
+      "bytes": 4894,
+      "sha256": "112907f4647d7900b25749edb7edfa1ae6b5fc08e94a133e9344daa87b7dabd2"
+    },
+    {
+      "path": "skills/clubett-identidade-visual/assets/identity/target-teal-logo-light.png",
+      "bytes": 4583,
+      "sha256": "0b22323dce7f0d3566fd3e7485a604f0d9eff94b540be09623037ab5635c8b02"
+    },
+    {
+      "path": "skills/clubett-identidade-visual/assets/narrative/crack-paper.webp",
+      "bytes": 473142,
+      "sha256": "ce730e9ecc3fe70c795837abc164bc489664578f30b34a34f95d743d7183b769"
+    },
+    {
+      "path": "skills/clubett-identidade-visual/assets/narrative/map-master.webp",
+      "bytes": 218644,
+      "sha256": "e4d09d87f6e1f69555758722e9b7b4290733fb7de8ed124f05904baa3aff97f0"
+    },
+    {
+      "path": "skills/clubett-identidade-visual/assets/narrative/pertencimento.webp",
+      "bytes": 273354,
+      "sha256": "b5c2bab7e374c2dc2847fa4e58420640be9e5dff3dd8c2c8e2fab764d58ecd5d"
+    },
+    {
+      "path": "skills/clubett-identidade-visual/assets/narrative/porto-seguro.webp",
+      "bytes": 245452,
+      "sha256": "61022c34bd0ae54bdd7591f4b3a1ef65776ad16690c6a4346fc28d76c72a30db"
+    },
+    {
+      "path": "skills/clubett-identidade-visual/assets/narrative/ship-release.webp",
+      "bytes": 289106,
+      "sha256": "f9abaf1006e2d1afd2d605b9b867d6fa3766820ae35b25b04f8ca1bbfd509525"
+    },
+    {
+      "path": "skills/clubett-identidade-visual/assets/narrative/storm-paper.webp",
+      "bytes": 505374,
+      "sha256": "3e080a32d4f4c77e9d4c347ccaeb4e9973f3db380e47e5a282216fabb1e88cf2"
+    },
+    {
+      "path": "skills/clubett-identidade-visual/assets/narrative/travessia-hero.webp",
+      "bytes": 242088,
+      "sha256": "7b46b8ecc5921c5d19f64bba735242f5121b48960f36af577c3ec6948b98fb8f"
+    },
+    {
+      "path": "skills/clubett-identidade-visual/assets/navigation/club-map.png",
+      "bytes": 1771183,
+      "sha256": "c00bfbcacd54859ab64221f0c84b36458444860ecafa5e7cfcde7857a07da281"
+    },
+    {
+      "path": "skills/clubett-identidade-visual/assets/navigation/compass.png",
+      "bytes": 1721294,
+      "sha256": "cebdaddf6d786150a2a8396d0094558bf27c56303fe82987b05618579015bfa0"
+    },
+    {
+      "path": "skills/clubett-identidade-visual/assets/navigation/wheel.webp",
+      "bytes": 142092,
+      "sha256": "1b54ffc651890b5e046521a88a9b39983b9605a14093cad300c7623e678aa0db"
+    },
+    {
+      "path": "skills/clubett-identidade-visual/references/assets.md",
+      "bytes": 1668,
+      "sha256": "6a2a95eb11e17210cdc7749450e83372a1c9af68ebca86b0f4c485df942bdc90"
+    },
+    {
+      "path": "skills/clubett-identidade-visual/references/clube.md",
+      "bytes": 3016,
+      "sha256": "ae5af8688fb9554055d2b654535a51f88fd80e9ea09d3540e84bf3901559b4d6"
+    },
+    {
+      "path": "skills/clubett-identidade-visual/references/decisoes-e-procedencia.md",
+      "bytes": 1608,
+      "sha256": "b5740e8903c24eb6790a27357f8f88b8d451aa7fc39d175fc417228ebee6871f"
+    },
+    {
+      "path": "skills/clubett-identidade-visual/references/design.md",
+      "bytes": 8051,
+      "sha256": "0553b824a6ce59636d0e446523307f12d5c11d5dd1af746e992a2b3252dbae54"
+    },
+    {
+      "path": "skills/clubett-identidade-visual/references/gramatica-visual.pdf",
+      "bytes": 5655017,
+      "sha256": "0d4a89b60b154d1394135d8c00b7986992121986fc4430322aca4ecf90a661af"
+    },
+    {
+      "path": "skills/clubett-identidade-visual/references/inventario-fonte.md",
+      "bytes": 12866,
+      "sha256": "fdfa0346004cb13fbf3268e9096ce67140f0bb179bd0553782edc8da9f30e9a4"
+    },
+    {
+      "path": "skills/clubett-identidade-visual/references/padroes-de-prompt.md",
+      "bytes": 7486,
+      "sha256": "5bcae3252dddbb34787fea1623ebf61f7d0e1b69d1134344b00fe27d82de10c4"
+    },
+    {
+      "path": "skills/motion-design/README.md",
+      "bytes": 1892,
+      "sha256": "29c42e69a1315a9ad12c6d4b7e97e20ad997bb2a3551ffe1fe46fb67fbc23b7d"
+    },
+    {
+      "path": "skills/motion-design/SKILL.md",
+      "bytes": 11636,
+      "sha256": "f0195ce9b14492fec244e780f462042ea8a59f32916ec4949349e7be6759bcb2"
+    },
+    {
+      "path": "skills/motion-design/examples/target-teal-planta-mapa/README.md",
+      "bytes": 4947,
+      "sha256": "143fd217d8e8e820088d20c26c7f9027d473190b6663ca6a6b590b29e1dcb859"
+    },
+    {
+      "path": "skills/motion-design/examples/target-teal-planta-mapa/audio.mjs",
+      "bytes": 16194,
+      "sha256": "1cd7d080a95042af768c2d6fe177670f7bb2a32207c071e6094272911b7492aa"
+    },
+    {
+      "path": "skills/motion-design/examples/target-teal-planta-mapa/brand.js",
+      "bytes": 1250,
+      "sha256": "4905acb7e534bffc8c5b0a6c1fd537f71c038989f14158669cb8ecd382b7b6bf"
+    },
+    {
+      "path": "skills/motion-design/examples/target-teal-planta-mapa/scene.js",
+      "bytes": 53374,
+      "sha256": "231f6bad0a70c03798a19061df412162368c82b595e7fc62e2c78c671337ce09"
+    },
+    {
+      "path": "skills/motion-design/examples/target-teal-planta-mapa/timeline.mjs",
+      "bytes": 2177,
+      "sha256": "d1bb53936d037dcb658d7a4960f34c9b6aab627101b731931efea9fd8662580f"
+    },
+    {
+      "path": "skills/motion-design/references/conceito.md",
+      "bytes": 6180,
+      "sha256": "16899c2a44dabe62525ee6a71f5f5f681c089daf429898a359710f2d9252c3be"
+    },
+    {
+      "path": "skills/motion-design/references/qa.md",
+      "bytes": 4057,
+      "sha256": "345bcdbb630fb6d75ccd6230aa4551e0bb5f3196b5d72f7d718c8e295a4588ac"
+    },
+    {
+      "path": "skills/motion-design/references/receitas.md",
+      "bytes": 13407,
+      "sha256": "21d86a8ca90803610181fa3bf678cd7e00aa18281a6814239e9340a844f2f5dd"
+    },
+    {
+      "path": "skills/motion-design/references/roteiro.md",
+      "bytes": 3811,
+      "sha256": "9a8d450d25cef687694700f3dc4e19af3e31b8a3961f39d6e86e898553dac945"
+    },
+    {
+      "path": "skills/motion-design/references/som.md",
+      "bytes": 3418,
+      "sha256": "88c7bd1519c07facd628b68de280740359265551939c040e068ae149b9e19af8"
+    },
+    {
+      "path": "skills/motion-design/references/tipografia.md",
+      "bytes": 2194,
+      "sha256": "fd346f1c05feea1a6b36203ebf1b46b7a37a272427a081729f2aa14ad140b5de"
+    },
+    {
+      "path": "skills/motion-design/scripts/new-video.sh",
+      "bytes": 748,
+      "sha256": "3f236b9fd4b7016f7c0bc1d85ed3daad9a0a7c6f0ef4e6fb199ccfb468e413ef"
+    },
+    {
+      "path": "skills/motion-design/template/.gitignore",
+      "bytes": 19,
+      "sha256": "9ae8e02462ff393bb40e787f0a65e79d241ed4f74b32cc57c64acb4ac18fa3fc"
+    },
+    {
+      "path": "skills/motion-design/template/audio.mjs",
+      "bytes": 2702,
+      "sha256": "c1baa0bf33fa69a7713b3f416969a569dd7f58d2c0bb5e384a4b9aa182d6855a"
+    },
+    {
+      "path": "skills/motion-design/template/audio/synth.mjs",
+      "bytes": 13413,
+      "sha256": "0d79f1d8473a41ec2150e2ee4d415b1a1ddc810603bd12150b8a88d807ae1c44"
+    },
+    {
+      "path": "skills/motion-design/template/brand.js",
+      "bytes": 1585,
+      "sha256": "8e2c4094e729539a90a7379a33e70e632cc55a4f2b952b19e8284186650a8e5e"
+    },
+    {
+      "path": "skills/motion-design/template/index.html",
+      "bytes": 344,
+      "sha256": "2542ddcc389da55cd4c61f073a075a32ff3bb0cc5f3f823deac1ea174fb4e217"
+    },
+    {
+      "path": "skills/motion-design/template/lib/camera.js",
+      "bytes": 3268,
+      "sha256": "7a87069a3f0817c45ea2a8b306f3d94f7a2213a9d25932fe09f14099981b98ff"
+    },
+    {
+      "path": "skills/motion-design/template/lib/core.js",
+      "bytes": 2744,
+      "sha256": "a279967fd0a6d60d986910bfea06179f1d798e9952f6dedb836f1c2395438b2c"
+    },
+    {
+      "path": "skills/motion-design/template/lib/engine.js",
+      "bytes": 2982,
+      "sha256": "1b685a7684169950d171195b68f5a938a6faa7e98ba7de5b35a9ec0e41322843"
+    },
+    {
+      "path": "skills/motion-design/template/lib/fx.js",
+      "bytes": 10347,
+      "sha256": "107be434df252d0bb2ee52cc0cf8415e7a24589c5ab973c87fdf7b816276da20"
+    },
+    {
+      "path": "skills/motion-design/template/lib/layout.js",
+      "bytes": 2100,
+      "sha256": "a4450e8f33eaedfa8c3e93bc3f4b8651cecba3e99d65c673b2e6dfa433cdcc03"
+    },
+    {
+      "path": "skills/motion-design/template/lib/paper.js",
+      "bytes": 2366,
+      "sha256": "2819c49b1aea2ecf06d1890fe0ce1a3aaee458c16d62057732c8553b860b8e98"
+    },
+    {
+      "path": "skills/motion-design/template/lib/path.js",
+      "bytes": 6108,
+      "sha256": "929280112942b57841317c27c6e119b14285c7d62d8e34f688e908c34ae70ea5"
+    },
+    {
+      "path": "skills/motion-design/template/lib/text.js",
+      "bytes": 7351,
+      "sha256": "49ff0bd9acd191e79fc251e8f2261d2025e6bc4470e47d822e389e5a0b1b680d"
+    },
+    {
+      "path": "skills/motion-design/template/package-lock.json",
+      "bytes": 9310,
+      "sha256": "fa0142033847d6887568adb29c237102df8b69808c1007fd36d46b41b890c258"
+    },
+    {
+      "path": "skills/motion-design/template/package.json",
+      "bytes": 528,
+      "sha256": "c64a5f858dc54057e9b6d632213ae9960f3faba6b1cb2a74eaea1b8a42cd6676"
+    },
+    {
+      "path": "skills/motion-design/template/render.mjs",
+      "bytes": 15124,
+      "sha256": "600dbb32851e1877ae2e6130bb010523095b32d9c4d4c62cd5569e3acb0b73ba"
+    },
+    {
+      "path": "skills/motion-design/template/scene.js",
+      "bytes": 6020,
+      "sha256": "b2e180628de1cd72d3a94b747eddfacd6a4534dea6abc0f330f41f449d1b9cba"
+    },
+    {
+      "path": "skills/motion-design/template/timeline.mjs",
+      "bytes": 1253,
+      "sha256": "b8374fed3cb79b9b61b04631c2923f719b5c3e08949a8cb66663755e76f4ecc0"
+    },
+    {
+      "path": "skills/motion-design/template/tools/bounds.mjs",
+      "bytes": 1997,
+      "sha256": "75382cb2ee31b54cebdfa22897f9809a8bc87e16353cd6960a75f83ae25e9bef"
+    },
+    {
+      "path": "skills/motion-design/template/tools/loudness.mjs",
+      "bytes": 1703,
+      "sha256": "b2cfe4104104077018e7e8f306acfdf956017d2ba8a7df59ebe1b8926469d6a4"
+    },
+    {
+      "path": "skills/motion-design/template/tools/zoom.mjs",
+      "bytes": 745,
+      "sha256": "95dcd348b0e3a101570a0a7c605677c12b52971a1eb14e4fb32f6387db6ba4c7"
+    },
+    {
+      "path": "skills/tt-editorial/SKILL.md",
+      "bytes": 4577,
+      "sha256": "a8b2631851018568e5cdf971be1addaf31accd1663cee1b56cce0e3a49efe628"
+    },
+    {
+      "path": "skills/tt-editorial/assets/contexto-campanha.md",
+      "bytes": 1420,
+      "sha256": "166e0291e65a7e51401ae9a6fa79dcaf8f5f5f567d5a31accdf45f1861b38041"
+    },
+    {
+      "path": "skills/tt-editorial/assets/roteiro.md",
+      "bytes": 732,
+      "sha256": "f4f3adffe32e0ee4587f1ceaf27ada66309d0455ca80ed1f4aa3f1483790f4ae"
+    },
+    {
+      "path": "skills/tt-editorial/references/arcos-e-critica.md",
+      "bytes": 2733,
+      "sha256": "5c2af9ac5006942c2e03937b52443a383218c680b958310113545f5f43dce6d2"
+    },
+    {
+      "path": "skills/tt-editorial/references/email.md",
+      "bytes": 1486,
+      "sha256": "e24053ca2927fa3bde193bfba0a4b517542f8874d3da2a2bceef8289940f8164"
+    },
+    {
+      "path": "skills/tt-editorial/references/instagram.md",
+      "bytes": 2144,
+      "sha256": "5c7d54378ba7908bf41ccc7233db8617fcbc8ebeafa74430aa95664be93d6fec"
+    },
+    {
+      "path": "skills/tt-editorial/references/linkedin.md",
+      "bytes": 1104,
+      "sha256": "99ace526860f12f56ca2a476e61d97c564599444a40fe0b6487071d53b98fe96"
+    },
+    {
+      "path": "skills/tt-editorial/references/voz-e-fontes.md",
+      "bytes": 2881,
+      "sha256": "d712540da0f507308aa81f1efe5222cdbd1e1bf68fb7d5617438f12e9914905e"
+    },
+    {
+      "path": "skills/tt-instagram/SKILL.md",
+      "bytes": 4999,
+      "sha256": "780a03e2ba91c8961b60f7a22f52816175cc8759ff2bb67a18ed671af5c4a890"
+    },
+    {
+      "path": "skills/tt-instagram/assets/approval.example.json",
+      "bytes": 335,
+      "sha256": "2c6e18ab70a97be87f488da153a292b674bf70fa793277f64706921451bd0ba3"
+    },
+    {
+      "path": "skills/tt-instagram/assets/feed-observations.example.json",
+      "bytes": 403,
+      "sha256": "4ff925529a6ea9ea38154c6ee079f5bcb7142382248cf0585c3f7bd28062eee0"
+    },
+    {
+      "path": "skills/tt-instagram/assets/manifest.example.json",
+      "bytes": 1025,
+      "sha256": "6944a31ac7560be7ff9bfe7827278189de0aefbd8be618c29b46fbbe0f47e092"
+    },
+    {
+      "path": "skills/tt-instagram/references/composio.md",
+      "bytes": 3112,
+      "sha256": "fb92fc4e8b8ed654498696f64ea2c7f518db196d1f9f48aa3c10c59c1dccbba7"
+    },
+    {
+      "path": "skills/tt-instagram/references/feed.md",
+      "bytes": 2503,
+      "sha256": "0ecc68fe38d68582b89ce735a900c88b4e38599aa7142562864be9589bc71bad"
+    },
+    {
+      "path": "skills/tt-instagram/references/manifesto-e-scripts.md",
+      "bytes": 5444,
+      "sha256": "39013e28add9cd822bee54a062cee44b1e1f7b5e071bded7544fb1b259705300"
+    },
+    {
+      "path": "skills/tt-instagram/references/publicacao.md",
+      "bytes": 3988,
+      "sha256": "4710f291ca3068a869f9d5394648c25daa2dbfdeb923a6a68a0b96199f9043c5"
+    },
+    {
+      "path": "skills/tt-instagram/requirements.txt",
+      "bytes": 11,
+      "sha256": "7d482b45b9069632e2f7acb6488a81c1806b2b310096d43b804dd9248c65d5c6"
+    },
+    {
+      "path": "skills/tt-instagram/scripts/carousel.py",
+      "bytes": 22997,
+      "sha256": "ab71e6f354d412b93f23929ecd85d45d97956d38dbb9eac79d5e7ea444cf5b94"
+    },
+    {
+      "path": "skills/tt-visual/SKILL.md",
+      "bytes": 4563,
+      "sha256": "5c8f78654e3668be552aeb5e8ea20ea5067c2816723edf09b7608aa5626b70f4"
+    },
+    {
+      "path": "skills/tt-visual/assets/capa-post-clara-referencia.jpg",
+      "bytes": 254766,
+      "sha256": "b5806199b418b1f9703ebab07100394f059dd6438bbe536b534f39aaa172e49c"
+    },
+    {
+      "path": "skills/tt-visual/assets/capa-post-teal-referencia.jpg",
+      "bytes": 305032,
+      "sha256": "f1f2570eea32262ff2bc390d2cf4dbded7a31ebe2f962d6222aaf1bc373ff85f"
+    },
+    {
+      "path": "skills/tt-visual/assets/capa-temporada-referencia.jpg",
+      "bytes": 203621,
+      "sha256": "968d83c98e1f50109682150db51c43d25ab0c4bb6e9b41012e14ba07833134ec"
+    },
+    {
+      "path": "skills/tt-visual/assets/gramatica-p07.png",
+      "bytes": 580369,
+      "sha256": "bd16a9d23962c74c61cb2238842f00baea235052b0ffd7d38c5f2539fb4b09dd"
+    },
+    {
+      "path": "skills/tt-visual/assets/gramatica-p09.png",
+      "bytes": 209902,
+      "sha256": "6c0ed6f3adc99699b6f96f8b444120f520c2218c69e6ab7547acf92182cb4969"
+    },
+    {
+      "path": "skills/tt-visual/assets/gramatica-visual.pdf",
+      "bytes": 5655017,
+      "sha256": "0d4a89b60b154d1394135d8c00b7986992121986fc4430322aca4ecf90a661af"
+    },
+    {
+      "path": "skills/tt-visual/assets/plano-visual.md",
+      "bytes": 831,
+      "sha256": "b0499c3922bdb901973bb2eec1b954d5e8269730c61bb26c874f3a691969eb30"
+    },
+    {
+      "path": "skills/tt-visual/assets/tokens.json",
+      "bytes": 715,
+      "sha256": "e78f53ceebf4d42423d2d8909370c208607379829cc31171c675f4b3b05b992e"
+    },
+    {
+      "path": "skills/tt-visual/references/caso-clube.md",
+      "bytes": 2191,
+      "sha256": "6d31bbcb8be933be81b2bf1903344bd59fd9b3aab1233b50dfc2391a9aa03a85"
+    },
+    {
+      "path": "skills/tt-visual/references/geracao-e-revisao.md",
+      "bytes": 3148,
+      "sha256": "5ecf254447c19b9f3d143b99c24afda202473516d662baca79b1666341ddbee9"
+    },
+    {
+      "path": "skills/tt-visual/references/gramatica-operacional.md",
+      "bytes": 3391,
+      "sha256": "11341b373b088824117ebd907a43697f4fb8db71caa27acdf57cd71e56036aff"
+    },
+    {
+      "path": "skills/tt-visual/scripts/contrast.py",
+      "bytes": 1555,
+      "sha256": "a77f30bded53a34076b0c0ef13da1e09942aeea625aec6dd18d37a6fe5bd07ff"
+    },
+    {
+      "path": "tests/README.md",
+      "bytes": 1093,
+      "sha256": "20487651abe57f96848c13214ea5fc0d9849c196fdfc5fc6b629ec284e2b60c3"
+    },
+    {
+      "path": "tests/test_bundle.py",
+      "bytes": 3947,
+      "sha256": "9d6cedfed58bc2a7fb641c04c4bec36111469e6c906fbf8116a3a354d4f55cf8"
+    },
+    {
+      "path": "tests/test_scripts.py",
+      "bytes": 11844,
+      "sha256": "e17999d18d2d227b2ed57f807de41d2cec3a567edb0a1288cfefe90b4e9fa527"
+    }
+  ]
+}

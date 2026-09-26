@@ -1,0 +1,22 @@
+{
+  "name": "motion-video",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "audio": "node audio.mjs",
+    "stills": "node render.mjs --stills",
+    "contact": "node render.mjs --contact",
+    "draft": "node render.mjs --draft",
+    "render": "node render.mjs",
+    "check": "node render.mjs --check"
+  },
+  "dependencies": {
+    "@fontsource/anton": "^5.0.0",
+    "@fontsource/roboto": "^5.0.0",
+    "ffmpeg-static": "^5.2.0",
+    "playwright-core": "^1.50.0"
+  },
+  "allowScripts": {
+    "ffmpeg-static": true
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "schema_version": "1.0",
+  "campaign_id": "substituir-pelo-projeto",
+  "account_username": null,
+  "target": {
+    "width": 1080,
+    "height": 1350,
+    "background": "#F2EFEB"
+  },
+  "caption": "",
+  "slides": [
+    {
+      "position": 1,
+      "id": "capa-post",
+      "role": "post_cover",
+      "file": "artes/01-capa.png",
+      "alt_text": "",
+      "copy_text": "",
+      "copy_status": "pending"
+    },
+    {
+      "position": 2,
+      "id": "argumento",
+      "role": "argument",
+      "file": "artes/02-argumento.png",
+      "alt_text": "",
+      "copy_text": "",
+      "copy_status": "pending"
+    },
+    {
+      "position": 3,
+      "id": "clube",
+      "role": "club_bridge",
+      "file": "artes/03-clube.png",
+      "alt_text": "",
+      "copy_text": "",
+      "copy_status": "pending"
+    },
+    {
+      "position": 4,
+      "id": "temporada",
+      "role": "season_closing",
+      "file": "artes/04-temporada.png",
+      "alt_text": "",
+      "copy_text": "",
+      "copy_status": "pending"
+    }
+  ]
+}

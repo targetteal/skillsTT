@@ -1,0 +1,12 @@
+{
+  "schema_version": "1.0",
+  "action": "publish",
+  "status": "pending",
+  "account_username": null,
+  "content_fingerprint": null,
+  "authorized_by": null,
+  "authorized_at": null,
+  "user_instruction": null,
+  "timing": null,
+  "note": "Modelo pendente. Nunca preencher como autorização sem instrução explícita registrada."
+}

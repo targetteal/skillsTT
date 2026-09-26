@@ -1,0 +1,16 @@
+{
+  "account_username": null,
+  "observed_at": null,
+  "listed_post_count": 0,
+  "inspected_image_count": 0,
+  "grid_verified": false,
+  "pinned_posts_verified": false,
+  "visible_grid": [],
+  "references": [],
+  "next_cover": {
+    "background": null,
+    "basis": null,
+    "uncertainty": null
+  },
+  "note": "Registrar links e o que efetivamente foi visto. Este modelo não descreve o feed atual."
+}
