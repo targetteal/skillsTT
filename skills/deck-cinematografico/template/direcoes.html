@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<!-- MOLDE DAS 3 DIREÇÕES (fase 3). Substitua o conteúdo pelos 2 planos-assinatura do projeto,
+     mantendo <section class="frame" id="A1">…; aplique a identidade do cliente em cada direção.
+     As três direções aqui (Ensaio, Manchete, Suíço) são exemplos; o conteúdo é fictício. -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Archivo:wdth,wght@62..125,100..900&family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=JetBrains+Mono:wght@300..700&display=block">
+<title>Direções editoriais · estudo de style frames</title>
+<style>
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: #777; padding: 40px; }
+  .frame { width: 1920px; height: 1080px; position: relative; overflow: hidden; margin: 0 auto 40px; }
+  .abs { position: absolute; }
+  .mono { font-family: "JetBrains Mono", monospace; text-transform: uppercase; }
+  svg.abs { overflow: visible; }
+
+  /* ================= A · ENSAIO ================= */
+  .A { background: #ECE5D5; color: #1A1916; }
+  .A::after { content: ""; position: absolute; inset: 0; pointer-events: none; opacity: .55; mix-blend-mode: multiply;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' seed='3' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 .1  0 0 0 0 .09  0 0 0 0 .07  0 0 0 .11 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>"); }
+  .A .mast { left: 96px; right: 96px; top: 64px; height: 44px; display: flex; justify-content: space-between; align-items: flex-end;
+    font-size: 17px; letter-spacing: .2em; border-bottom: 1.5px solid #1A1916; padding-bottom: 14px; }
+  .A .serif { font-family: "Instrument Serif", serif; font-weight: 400; }
+  .A em { font-style: italic; color: #B5482F; }
+  .A .h1 { left: 96px; top: 190px; width: 1740px; font-size: 200px; line-height: .93; letter-spacing: -.028em; }
+  .A .band { left: 96px; right: 96px; top: 850px; border-top: 1.5px solid #1A1916; display: grid; grid-template-columns: 1.55fr 1fr 1fr; }
+  .A .band > div { padding: 26px 32px 0 0; }
+  .A .band > div + div { border-left: 1px solid rgba(26,25,22,.35); padding-left: 32px; }
+  .A .num { font-size: 104px; line-height: .9; letter-spacing: -.02em; }
+  .A .lab { font-size: 16px; letter-spacing: .2em; margin-top: 14px; color: #4D493F; }
+  .A .tally { display: flex; gap: 3px; margin-top: 18px; }
+  .A .tally i { width: 3px; height: 18px; background: #1A1916; display: block; }
+  .A .tally i:nth-child(5n) { background: #B5482F; }
+  .A .folio { right: 96px; bottom: 44px; font-size: 15px; letter-spacing: .2em; color: #4D493F; }
+  .A .kicker { font-size: 17px; letter-spacing: .22em; color: #B5482F; }
+  .A .h2 { left: 96px; top: 232px; width: 640px; font-size: 112px; line-height: .95; letter-spacing: -.025em; }
+  .A .dek { left: 96px; top: 800px; width: 560px; font-family: "Newsreader", serif; font-style: italic; font-size: 30px; line-height: 1.35; color: #3E3A31; border-top: 1px solid rgba(26,25,22,.4); padding-top: 22px; }
+  .A .vl .nm { font-family: "Instrument Serif", serif; font-size: 64px; line-height: 1; letter-spacing: -.02em; }
+  .A .vl .nm small { font-family: "JetBrains Mono"; font-size: 16px; letter-spacing: .2em; vertical-align: top; margin-right: 12px; position: relative; top: 10px; color: #4D493F; }
+  .A .vl .sb { font-family: "JetBrains Mono"; text-transform: uppercase; font-size: 16px; letter-spacing: .22em; margin-top: 10px; }
+  .A .vl .ls { font-family: "Newsreader", serif; font-size: 25px; line-height: 1.3; color: #4D493F; margin-top: 8px; }
+
+  /* ================= B · MANCHETE ================= */
+  .B { background: #121211; color: #F1EBDD; }
+  .B .cond { font-family: "Archivo", sans-serif; font-stretch: 62%; font-weight: 820; text-transform: uppercase; }
+  .B .h1 { left: 88px; top: 118px; width: 1360px; font-size: 212px; line-height: .84; letter-spacing: -.005em; }
+  .B .h1 span { color: #E8613C; }
+  .B .side { left: 1520px; width: 304px; top: 118px; bottom: 96px; border-left: 2px solid #E8613C; padding-left: 28px; display: flex; flex-direction: column; justify-content: space-between; }
+  .B .side .mono { font-size: 16px; letter-spacing: .2em; color: #A8A294; }
+  .B .dots { display: grid; grid-template-columns: repeat(14, 14px); gap: 6px; }
+  .B .dots i { width: 14px; height: 14px; background: #F1EBDD; display: block; }
+  .B .dek { font-family: "Newsreader", serif; font-style: italic; font-size: 32px; line-height: 1.3; }
+  .B .dek b { font-style: normal; font-family: "Archivo"; font-stretch: 62%; font-weight: 800; font-size: 44px; color: #E8613C; display: block; line-height: 1; }
+  .B .top { left: 0; right: 0; top: 0; height: 330px; background: #121211; }
+  .B .h2 { left: 88px; top: 96px; width: 1400px; font-size: 104px; line-height: .88; }
+  .B .panel { top: 330px; bottom: 0; width: 640px; color: #121211; padding: 44px 48px; }
+  .B .panel .idx { font-family: "JetBrains Mono"; font-size: 18px; letter-spacing: .2em; display: flex; justify-content: space-between; border-bottom: 2px solid #121211; padding-bottom: 14px; }
+  .B .panel .ls { font-family: "Newsreader", serif; font-size: 31px; line-height: 1.3; margin-top: 26px; width: 470px; }
+  .B .panel .nm { position: absolute; left: 44px; bottom: 36px; font-size: 128px; line-height: .82; width: 560px; }
+
+  /* ================= C · SUÍÇO ================= */
+  .C { background: #F2F0EB; color: #141414; font-family: "Archivo", sans-serif; }
+  .C .grid { inset: 0; background-image: repeating-linear-gradient(to right, transparent 0 96px, rgba(20,20,20,.07) 96px 97px, transparent 97px 120px); }
+  .C .cols { left: 96px; right: 96px; top: 0; bottom: 0; display: grid; grid-template-columns: repeat(12, 1fr); column-gap: 24px; }
+  .C .cols i { border-left: 1px solid rgba(20,20,20,.08); border-right: 1px solid rgba(20,20,20,.08); }
+  .C .h1 { left: 96px; top: 120px; width: 1060px; font-size: 118px; font-weight: 520; line-height: .98; letter-spacing: -.048em; }
+  .C .big { left: 1190px; top: 430px; font-size: 740px; font-weight: 180; line-height: .8; letter-spacing: -.07em; color: #E8422F; }
+  .C .table { left: 96px; top: 800px; width: 740px; font-family: "JetBrains Mono"; font-size: 22px; }
+  .C .table div { display: grid; grid-template-columns: 150px 1fr; border-top: 1.5px solid #141414; padding: 14px 0; }
+  .C .table div:last-child { border-bottom: 1.5px solid #141414; }
+  .C .table b { font-weight: 600; }
+  .C .meta { left: 96px; top: 56px; right: 96px; display: flex; justify-content: space-between; font-family: "JetBrains Mono"; font-size: 16px; letter-spacing: .12em; text-transform: uppercase; }
+  .C .h2 { left: 1128px; top: 120px; width: 700px; font-size: 76px; font-weight: 520; line-height: 1; letter-spacing: -.045em; }
+  .C .rows { left: 1128px; top: 470px; width: 696px; }
+  .C .row { display: grid; grid-template-columns: 58px 1fr; border-top: 1.5px solid #141414; padding: 18px 0 22px; }
+  .C .row .n { font-family: "JetBrains Mono"; font-size: 18px; padding-top: 10px; }
+  .C .row .nm { font-size: 50px; font-weight: 600; letter-spacing: -.035em; line-height: 1; display: flex; align-items: center; gap: 16px; }
+  .C .row .nm i { width: 22px; height: 22px; display: block; }
+  .C .row .sb { font-family: "JetBrains Mono"; text-transform: uppercase; font-size: 15px; letter-spacing: .16em; margin-top: 10px; color: #555; }
+  .C .row .ls { font-size: 24px; font-weight: 340; margin-top: 4px; color: #333; }
+</style>
+</head>
+<body>
+
+<!-- ============ A1 ============ -->
+<section class="frame A" id="A1">
+  <div class="abs mast mono"><span>Nome do projeto</span><span>Cliente · 30.09.2026</span><span>Nº 01</span></div>
+  <div class="abs h1 serif">O que impede as pessoas de fazerem seu <em>melhor trabalho?</em></div>
+  <div class="abs band">
+    <div><div class="num serif">98</div><div class="lab mono">entrevistas</div><div class="tally" id="tally"></div></div>
+    <div><div class="num serif">100+</div><div class="lab mono">fontes</div></div>
+    <div><div class="num serif">100+</div><div class="lab mono">arquivos analisados</div></div>
+  </div>
+</section>
+
+<!-- ============ A2 ============ -->
+<section class="frame A" id="A2">
+  <div class="abs mast mono"><span>Nome do projeto</span><span>Cliente · 30.09.2026</span><span>Nº 02</span></div>
+  <div class="abs mono kicker" style="left:96px;top:176px">II · Três dimensões</div>
+  <div class="abs h2 serif">Três ângulos simultâneos para olhar <em>o mesmo fenômeno.</em></div>
+  <div class="abs dek">Um recurso didático para organizar a leitura, não uma divisão da organização.</div>
+  <svg class="abs" style="left:0;top:0" width="1920" height="1080">
+    <g fill="none" stroke="#1A1916">
+      <path d="M1320 214 L932 886 L1708 886 Z" stroke-width="1.8"/>
+      <path d="M1320 214 L1320 662 M932 886 L1320 662 L1708 886" stroke-width="1" stroke-dasharray="3 7" opacity=".6"/>
+      <circle cx="1320" cy="662" r="190" stroke-width="1" opacity=".35"/>
+      <circle cx="1320" cy="662" r="95" stroke-width="1" opacity=".35"/>
+    </g>
+    <circle cx="1320" cy="214" r="15" fill="#2E5E52"/>
+    <circle cx="932" cy="886" r="15" fill="#B5482F"/>
+    <circle cx="1708" cy="886" r="15" fill="#B08426"/>
+    <circle cx="1320" cy="662" r="5" fill="#1A1916"/>
+  </svg>
+  <div class="abs vl" style="left:1410px;top:176px;width:440px"><div class="nm"><small>I</small>Processos</div><div class="sb" style="color:#2E5E52">técnico</div><div class="ls">processos, sistemas, metas, regras</div></div>
+  <div class="abs vl" style="left:780px;top:916px;width:520px"><div class="nm"><small>II</small>Pessoas</div><div class="sb" style="color:#B5482F">relacional</div></div>
+  <div class="abs vl" style="left:1470px;top:916px;width:420px"><div class="nm"><small>III</small>Decisões</div><div class="sb" style="color:#B08426">político</div></div>
+</section>
+
+<!-- ============ B1 ============ -->
+<section class="frame B" id="B1">
+  <div class="abs h1 cond">O que impede as pessoas de fazerem seu <span>melhor trabalho?</span></div>
+  <div class="abs side">
+    <div class="mono">Nº 01 · A pergunta</div>
+    <div>
+      <div class="dots" id="dotsB"></div>
+      <p class="dek" style="margin-top:34px"><b>98 entrevistas</b>mais de 100 fontes e mais de 100 arquivos analisados.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ B2 ============ -->
+<section class="frame B" id="B2">
+  <div class="abs top"></div>
+  <div class="abs h2 cond">Três ângulos simultâneos para olhar o mesmo fenômeno</div>
+  <svg class="abs" style="left:1560px;top:70px" width="220" height="200" viewBox="0 0 220 200">
+    <path d="M110 12 L10 186 L210 186 Z" fill="none" stroke="#F1EBDD" stroke-width="3"/>
+    <circle cx="110" cy="12" r="11" fill="#1E8A72"/><circle cx="10" cy="186" r="11" fill="#E8613C"/><circle cx="210" cy="186" r="11" fill="#E9A92F"/>
+  </svg>
+  <div class="abs panel" style="left:0;background:#1E8A72"><div class="idx"><span>01</span><span>técnico</span></div><p class="ls">processos, sistemas, metas, regras</p><div class="nm cond">Processos</div></div>
+  <div class="abs panel" style="left:640px;background:#E8613C"><div class="idx"><span>02</span><span>relacional</span></div><p class="ls">relações, clima, informação, reconhecimento</p><div class="nm cond">Pessoas</div></div>
+  <div class="abs panel" style="left:1280px;background:#E9A92F"><div class="idx"><span>03</span><span>político</span></div><p class="ls">poder, decisão, estratégia, alianças</p><div class="nm cond">Decisões</div></div>
+</section>
+
+<!-- ============ C1 ============ -->
+<section class="frame C" id="C1">
+  <div class="abs cols"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+  <div class="abs meta"><span>Nome do projeto</span><span>01/12</span><span>Cliente</span></div>
+  <div class="abs big">98</div>
+  <div class="abs h1">O que impede as pessoas de fazerem seu melhor trabalho?</div>
+  <div class="abs table">
+    <div><b>98</b><span>entrevistas</span></div>
+    <div><b>100+</b><span>fontes</span></div>
+    <div><b>100+</b><span>arquivos analisados</span></div>
+  </div>
+</section>
+
+<!-- ============ C2 ============ -->
+<section class="frame C" id="C2">
+  <div class="abs cols"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+  <div class="abs meta"><span>Nome do projeto</span><span>02/12</span><span>Cliente</span></div>
+  <svg class="abs" style="left:0;top:0" width="1920" height="1080">
+    <!-- equilateral, centroid split: top (560,150) BL(110,930) BR(1010,930), centroid (560,670) -->
+    <path d="M560 150 L110 930 L560 670 Z" fill="#0B6E5C"/>
+    <path d="M110 930 L1010 930 L560 670 Z" fill="#E8422F"/>
+    <path d="M1010 930 L560 150 L560 670 Z" fill="#F2B134"/>
+    <g font-family="JetBrains Mono" font-size="22" fill="#F2F0EB" font-weight="600">
+      <text x="430" y="610">01</text><text x="540" y="860">02</text><text x="640" y="610">03</text>
+    </g>
+  </svg>
+  <div class="abs h2">Três ângulos simultâneos para olhar o mesmo fenômeno.</div>
+  <div class="abs rows">
+    <div class="row"><div class="n">01</div><div><div class="nm"><i style="background:#0B6E5C"></i>Processos</div><div class="sb">técnico</div><div class="ls">processos, sistemas, metas, regras</div></div></div>
+    <div class="row"><div class="n">02</div><div><div class="nm"><i style="background:#E8422F"></i>Pessoas</div><div class="sb">relacional</div><div class="ls">relações, clima, informação, reconhecimento</div></div></div>
+    <div class="row"><div class="n">03</div><div><div class="nm"><i style="background:#F2B134"></i>Decisões</div><div class="sb">político</div><div class="ls">poder, decisão, estratégia, alianças</div></div></div>
+  </div>
+</section>
+
+<script>
+  document.getElementById("tally").innerHTML = "<i></i>".repeat(98);
+  document.getElementById("dotsB").innerHTML = "<i></i>".repeat(98);
+</script>
+</body>
+</html>

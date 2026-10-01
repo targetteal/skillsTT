@@ -8,7 +8,7 @@ Cada pasta em `skills/` é uma skill completa: um arquivo de instruções
 
 Instale só as que você vai usar. Cada pasta funciona sozinha.
 
-## As cinco skills
+## As seis skills
 
 | Skill | Para que serve | O que não faz |
 |---|---|---|
@@ -17,6 +17,7 @@ Instale só as que você vai usar. Cada pasta funciona sozinha.
 | `tt-instagram` | Ler referências e a grade, ordenar, exportar e preparar publicação autorizada | Não decide a tese e não publica por conta própria |
 | `motion-design` | Produzir vídeo de motion design (MP4 com som) inteiramente em código: conceito, animação, áudio e render | Não faz GIF de interface, animação CSS de site nem edição de vídeo gravado |
 | `clubett-identidade-visual` | Criar e revisar peças visuais com a identidade oficial e a gramática do Clube | Não inventa dado, evento, citação ou autorização de uso |
+| `deck-cinematografico` | Apresentação com motion design cinematográfico que roda ao vivo (cada clique toca a animação) e vira MP4 do mesmo arquivo: ideação, roteiro, direção visual, storyboard, câmera 3D, verificação, com qualquer identidade | Não faz vídeo puro sem apresentação ao vivo (use `motion-design`) nem slides estáticos |
 
 ## Instalar
 
@@ -28,6 +29,7 @@ npx skills add targetteal/skillsTT --skill tt-visual -g -y
 npx skills add targetteal/skillsTT --skill tt-instagram -g -y
 npx skills add targetteal/skillsTT --skill motion-design -g -y
 npx skills add targetteal/skillsTT --skill clubett-identidade-visual -g -y
+npx skills add targetteal/skillsTT --skill deck-cinematografico -g -y
 ```
 
 No Hermes Agent:
@@ -38,6 +40,7 @@ hermes skills install targetteal/skillsTT/skills/tt-visual --yes
 hermes skills install targetteal/skillsTT/skills/tt-instagram --yes
 hermes skills install targetteal/skillsTT/skills/motion-design --yes
 hermes skills install targetteal/skillsTT/skills/clubett-identidade-visual --yes
+hermes skills install targetteal/skillsTT/skills/deck-cinematografico --yes
 ```
 
 Para instalar apenas em um projeto, retire o `-g`. Para escolher o agente,
@@ -68,7 +71,7 @@ tt-editorial  --roteiro aprovado-->  tt-visual  --manifesto e arquivos-->  tt-in
 composição. `tt-instagram` recebe a ordem e os arquivos exatos e cuida da
 exportação e, só com autorização explícita, da publicação.
 
-`motion-design` e `clubett-identidade-visual` são independentes e não dependem
+`motion-design`, `deck-cinematografico` e `clubett-identidade-visual` são independentes e não dependem
 desse encadeamento. Um pedido pequeno, como revisar uma legenda, não precisa
 disparar a produção inteira.
 

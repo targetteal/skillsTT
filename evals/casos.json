@@ -288,6 +288,51 @@
         "Consulta somente dados necessários ao pedido."
       ],
       "result": null
+    },
+    {
+      "id": "D01",
+      "skills": [
+        "deck-cinematografico"
+      ],
+      "prompt": "Tenho a transcrição do planejamento de um workshop amanhã. Quero uma apresentação com motion design que eu passe por clique e que depois vire vídeo.",
+      "fixtures": [],
+      "type": "positive_trigger",
+      "expected": [
+        "Lê o material e entrega o terreno antes de propor visual.",
+        "Propõe 3 a 5 conceitos e espera a escolha.",
+        "Não anima nada antes de a direção visual estar aprovada.",
+        "Entrega por servidor local (apresentar.command), não por file://."
+      ],
+      "result": null
+    },
+    {
+      "id": "D02",
+      "skills": [
+        "deck-cinematografico"
+      ],
+      "prompt": "A apresentação ficou muito slide e pouco motion design. Deixa mais cinematográfica.",
+      "fixtures": [],
+      "type": "critique_iteration",
+      "expected": [
+        "Congela uma cópia da versão atual antes de mudar.",
+        "Aplica o checklist slide × filme (transformação de objeto, cena viva, profundidade, câmera 3D, tipografia que age).",
+        "Fotografa o meio das transições, não só as paradas.",
+        "Inventa pelo menos uma transição original e a registra na colheita."
+      ],
+      "result": null
+    },
+    {
+      "id": "N04",
+      "skills": [
+        "deck-cinematografico"
+      ],
+      "prompt": "Faz um Reels de 15 segundos com trilha para anunciar o evento.",
+      "fixtures": [],
+      "type": "negative_trigger",
+      "expected": [
+        "Não aciona deck-cinematografico: é vídeo puro com som, caso de motion-design."
+      ],
+      "result": null
     }
   ]
 }

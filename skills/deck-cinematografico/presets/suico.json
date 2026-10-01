@@ -1,0 +1,12 @@
+{
+  "nome": "Suíço",
+  "descricao": "Catálogo de museu: grade rigorosa, grotesca com tracking apertado, números gigantes, formas sólidas.",
+  "cores": { "papel": "#F2F0EB", "papel_claro": "#F7F5F1", "papel_escuro": "#E6E3DC", "tinta": "#141414", "suave": "#555555", "acento": "#E8422F", "categorias": ["#0B6E5C", "#E8422F", "#F2B134"] },
+  "fontes": {
+    "display": { "familia": "Archivo", "google": "Archivo:wdth,wght@62..125,100..900", "pilha": "Helvetica Neue, sans-serif", "peso": 520, "espacamento": "-0.045em" },
+    "texto": { "familia": "Archivo", "google": "Archivo:wdth,wght@62..125,100..900", "pilha": "Helvetica Neue, sans-serif" },
+    "mono": { "familia": "JetBrains Mono", "google": "JetBrains+Mono:wght@300..700", "pilha": "ui-monospace, monospace" }
+  },
+  "textura": { "grao": 0 },
+  "movimento": { "respiracao": 0.8 }
+}

@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1920, height=1080" />
+    <title>{{TITULO}}</title>
+    <script src="vendor/gsap.min.js"></script>
+    <!-- IDENTIDADE:INICIO (gerado por scripts/aplicar-identidade.mjs; não editar à mão) -->
+    <!-- IDENTIDADE:FIM -->
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { margin: 0; width: 1920px; height: 1080px; overflow: hidden; background: var(--papel); }
+      #root { position: relative; width: 100%; height: 100%; overflow: hidden; color: var(--tinta); }
+      .fill { position: absolute; inset: 0; }
+      #paper { background: radial-gradient(ellipse 110% 90% at 50% 42%, var(--papel-claro) 0%, var(--papel) 60%, var(--papel-escuro) 100%); }
+      #grain { opacity: var(--grao); mix-blend-mode: multiply; pointer-events: none;
+        background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' seed='3' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 .1  0 0 0 0 .09  0 0 0 0 .07  0 0 0 .11 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>"); }
+      em { font-style: italic; color: var(--acento); }
+      .mono { text-transform: uppercase; letter-spacing: .2em; white-space: nowrap; }
+      .ln { display: block; overflow: hidden; padding: 0 .08em .14em 0; margin-bottom: -.14em; }
+      .ln > span { display: block; }
+      .w, .hud { position: absolute; }
+      svg.w { overflow: visible; left: 0; top: 0; }
+      .p3d { transform-style: preserve-3d; }
+      .odo { display: inline-flex; align-items: flex-start; overflow: hidden; }
+      .odo .strip { display: flex; flex-direction: column; }
+      .odo .strip span { display: block; text-align: center; }
+
+      /* Câmera 3D: dolly real (s), inclinação (rx), órbita (ry), rolagem (r). Respiração vem de --at. */
+      #camvars { position: absolute; inset: 0; --cx: 960; --cy: 540; --s: 1; --r: 0; --rx: 0; --ry: 0; --at: 0; }
+      #breath { position: absolute; inset: 0; perspective: 1600px; perspective-origin: 960px 540px; }
+      #cam { position: absolute; left: 0; top: 0; width: 0; height: 0; transform-style: preserve-3d;
+        transform: translate3d(calc(960px + sin(var(--at) * .21) * 7px * var(--resp)), calc(540px + cos(var(--at) * .16) * 5px * var(--resp)), 0)
+          translateZ(calc(1600px - 1600px / var(--s)))
+          rotateX(calc(var(--rx) * 1deg + cos(var(--at) * .11) * .7deg * var(--resp)))
+          rotateY(calc(var(--ry) * 1deg + sin(var(--at) * .13) * 1.1deg * var(--resp)))
+          rotateZ(calc(var(--r) * 1deg))
+          translate3d(calc(var(--cx) * -1px), calc(var(--cy) * -1px), 0); }
+
+      /* Cabeçalho de revista */
+      #mastbg { position: absolute; left: 0; top: 0; width: 1920px; height: 160px; background: linear-gradient(to bottom, var(--papel) 0%, color-mix(in srgb, var(--papel) 90%, transparent) 55%, transparent 100%); }
+      #mast { position: absolute; left: 96px; right: 96px; top: 58px; height: 40px; display: flex; justify-content: space-between; align-items: flex-end; font-size: 17px; }
+      #mast-rule { position: absolute; left: 96px; right: 96px; top: 108px; height: 1.5px; background: var(--tinta); transform-origin: 0 50%; }
+      #mast .no { position: relative; width: 90px; height: 22px; overflow: hidden; text-align: right; }
+      #mast .no span { position: absolute; right: 0; top: 0; }
+
+      /* estilos dos planos deste projeto */
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="1" data-width="1920" data-height="1080">
+      <div id="paper" class="fill" data-layout-ignore></div>
+      <div id="grain" class="fill" data-layout-ignore></div>
+      <div id="camvars">
+        <div id="breath">
+          <div id="cam">
+            <div id="bg3d" class="w" data-layout-ignore style="left:0;top:0;transform:translateZ(-2600px)"></div>
+            <div id="dust" class="w p3d" data-layout-ignore style="left:0;top:0"></div>
+            <div id="fg" class="w p3d" data-layout-ignore style="left:0;top:0"></div>
+          </div>
+        </div>
+      </div>
+      <div id="hud"></div>
+      <div id="mastbg" data-layout-ignore></div>
+      <div id="mast" class="mono"><span class="m" data-cab="esq">{{CABECALHO_ESQ}}</span><span class="m" data-cab="centro">{{CABECALHO_CENTRO}}</span><span class="m no"></span></div>
+      <div id="mast-rule"></div>
+    </div>
+
+    <script>window.__timelines = window.__timelines || {};</script>
+    <script src="motor.js"></script>
+    <!-- PLANOS:INICIO (um <script> por plano, na ordem do filme) -->
+    <script src="planos/01-exemplo-pergunta.js"></script>
+    <script src="planos/02-exemplo-forma.js"></script>
+    <!-- PLANOS:FIM -->
+    <script>
+      Deck.iniciar({ reentrada: { ate: "forma-2", segundos: 20 } });
+    </script>
+  </body>
+</html>
