@@ -3,14 +3,15 @@
   "description": "Skills de agente da Target Teal e do Clube dos Agentes de Mudança",
   "skills": [
     "clubett-identidade-visual",
+    "deck-cinematografico",
     "motion-design",
     "tt-editorial",
     "tt-instagram",
     "tt-visual"
   ],
-  "skill_count": 5,
-  "generated_at": "2026-09-26T12:52:18-03:00",
-  "generated_from": "pacote TT Skills 0.1.0 + repo targetteal/clubett-identidade-visual@3dc5ed9 + skill motion-design 1.1.0 (c.a.m@08e076a)",
+  "skill_count": 6,
+  "generated_at": "2026-10-01T11:59:00-03:00",
+  "generated_from": "pacote TT Skills 0.1.0 + repo targetteal/clubett-identidade-visual@3dc5ed9 + skill motion-design 1.1.0 (c.a.m@08e076a) + skill deck-cinematografico 1.0.0",
   "files": [
     {
       "path": ".gitignore",
@@ -29,13 +30,13 @@
     },
     {
       "path": "PROCEDENCIA.md",
-      "bytes": 3889,
-      "sha256": "68ea854e7688877c4c20361884e96fcd4b367a6b4f782d23b7665273cc9a76a9"
+      "bytes": 5040,
+      "sha256": "7706090aac4bcaa5945580c7bb1a7938e5157335c51a82e38cf0ea82573e1645"
     },
     {
       "path": "README.md",
-      "bytes": 5981,
-      "sha256": "78c1d69ee39f6bce3d3546aa9bc688d36290c248ae227b22c6d02354a1626953"
+      "bytes": 6502,
+      "sha256": "524087e63e4dc44b9df0c151a02ee71e9cadbe74a9d915c39eebf3320cd081af"
     },
     {
       "path": "TESTES.md",
@@ -49,8 +50,8 @@
     },
     {
       "path": "evals/casos.json",
-      "bytes": 9992,
-      "sha256": "9685e85ecc612c4f9cdb119fc2751bf568c9e860e25bcb9387192147db53549b"
+      "bytes": 11649,
+      "sha256": "2485781b6655d73045003c961ba52954474eb75fee50d4bddc782e7f1f1a30ae"
     },
     {
       "path": "requirements-dev.txt",
@@ -171,6 +172,266 @@
       "path": "skills/clubett-identidade-visual/references/padroes-de-prompt.md",
       "bytes": 7486,
       "sha256": "5bcae3252dddbb34787fea1623ebf61f7d0e1b69d1134344b00fe27d82de10c4"
+    },
+    {
+      "path": "skills/deck-cinematografico/CHANGELOG.md",
+      "bytes": 587,
+      "sha256": "46afbdf297ac6192a9e974db6804cbb6e59cf8f6efd0dd29353238b1cb6a4c0e"
+    },
+    {
+      "path": "skills/deck-cinematografico/README.md",
+      "bytes": 222,
+      "sha256": "823a9a87536d48181a1f058518278cf032de2083f0bd56e3b6b96835084df3f1"
+    },
+    {
+      "path": "skills/deck-cinematografico/SKILL.md",
+      "bytes": 6845,
+      "sha256": "79c7866d970498ce7d8ea6aa6e1892971629f814c4254d3404703f5b043d4bf6"
+    },
+    {
+      "path": "skills/deck-cinematografico/presets/ensaio.json",
+      "bytes": 921,
+      "sha256": "074d784f29de788985d698a3a21740a459aaaeeacfde7b31ac09b652f815dcde"
+    },
+    {
+      "path": "skills/deck-cinematografico/presets/manchete.json",
+      "bytes": 956,
+      "sha256": "ba73a0cf7cc619925f2a86b159e6bec6f9febaa1cf5f4bece4239c903d1ecc25"
+    },
+    {
+      "path": "skills/deck-cinematografico/presets/suico.json",
+      "bytes": 845,
+      "sha256": "970611bf0649eb8eeb0d9183fa61593f97f4eb045aab1aa7ab1ff4746f2f30a9"
+    },
+    {
+      "path": "skills/deck-cinematografico/references/armadilhas.md",
+      "bytes": 2236,
+      "sha256": "8eb207a4804f931f3142b01d5bfedcc37766b5928668fdc534a58842e767ac69"
+    },
+    {
+      "path": "skills/deck-cinematografico/references/direcao-visual.md",
+      "bytes": 1367,
+      "sha256": "ea9ad1f8b93b1241c8cd8a458dab033d782bc203d6606d8b62397e671613de8e"
+    },
+    {
+      "path": "skills/deck-cinematografico/references/ideacao.md",
+      "bytes": 1501,
+      "sha256": "b82bb9d874f681b57951332220f933a18dc6a6b255c3a8b05d86d7f656ba4ebf"
+    },
+    {
+      "path": "skills/deck-cinematografico/references/identidade.md",
+      "bytes": 1680,
+      "sha256": "7012b912e9041b50005618e56c61f05e21ef704d8615d25d752071a1ccd09eaf"
+    },
+    {
+      "path": "skills/deck-cinematografico/references/motor.md",
+      "bytes": 2354,
+      "sha256": "8ce3f4d6640252a74cfa71a39d433f1a2b24f274bb118f94c16e0d55e72f0c6f"
+    },
+    {
+      "path": "skills/deck-cinematografico/references/passe-cinematografico.md",
+      "bytes": 1396,
+      "sha256": "3829e2f097358a0112e94f8100b21aa0fea13c8fe7c0c7141a0e2c90641bdea1"
+    },
+    {
+      "path": "skills/deck-cinematografico/references/roteiro-por-planos.md",
+      "bytes": 1097,
+      "sha256": "657fbb18530e782049ade974841ff552db46f40fbda54b442b922b50785898b1"
+    },
+    {
+      "path": "skills/deck-cinematografico/references/storyboard.md",
+      "bytes": 1330,
+      "sha256": "6eec6977f4aab50f2b3c3772b7605d83a7faee7c2b86591ff4cd0dae79f9a995"
+    },
+    {
+      "path": "skills/deck-cinematografico/references/terreno.md",
+      "bytes": 862,
+      "sha256": "45b5106382a74b5bbea0b8cb4a5928e6f560a3b7e22cb7ac48e8f8bfc55ee705"
+    },
+    {
+      "path": "skills/deck-cinematografico/references/transicoes/INDEX.md",
+      "bytes": 2894,
+      "sha256": "c752aa014c20ce9815d9de2a017a7f2b6a92391569b75329285b22c74f6b2ddc"
+    },
+    {
+      "path": "skills/deck-cinematografico/references/transicoes/_modelo.md",
+      "bytes": 516,
+      "sha256": "dc708cd6d18a6407bfe7d4a73de3ebb3b3c05469feda071329d07b362efd72a2"
+    },
+    {
+      "path": "skills/deck-cinematografico/references/transicoes/achatar-em-mapa.md",
+      "bytes": 1227,
+      "sha256": "30ad43760d814cfa1edb12daf4b7943d65234042673c5822b7753f607bd7ffe6"
+    },
+    {
+      "path": "skills/deck-cinematografico/references/transicoes/atlas.md",
+      "bytes": 590,
+      "sha256": "fad22f429d324846b043610474495cbee68693b6a8875880b9d3e9818020beed"
+    },
+    {
+      "path": "skills/deck-cinematografico/references/transicoes/cards-fluem.md",
+      "bytes": 754,
+      "sha256": "5ede083b3639af5516f2bb64121e7ad7dc989e5ff6137d55c88fdfadf800091e"
+    },
+    {
+      "path": "skills/deck-cinematografico/references/transicoes/estilhaco-constelacao.md",
+      "bytes": 1912,
+      "sha256": "0daf108ce6b781f3f16052382937e3544197d79d3e5dd5f5884b494e63cd6919"
+    },
+    {
+      "path": "skills/deck-cinematografico/references/transicoes/fio-guia.md",
+      "bytes": 1412,
+      "sha256": "54c5248ca8740ebd751b69cabba165ff5deffee72e89eff6cce93d4c81577608"
+    },
+    {
+      "path": "skills/deck-cinematografico/references/transicoes/forma-vira-forma.md",
+      "bytes": 1203,
+      "sha256": "04c80d52a9537e8ff5f0bb3846cb5d2b61e3a7868f0ef75c82af69e91f681e63"
+    },
+    {
+      "path": "skills/deck-cinematografico/references/transicoes/marcadores-viajam.md",
+      "bytes": 1162,
+      "sha256": "a33ea7bd958d74f13dea5d13e35e1faa2f50ed4c7ca39e85ccdc2d3aab390e1c"
+    },
+    {
+      "path": "skills/deck-cinematografico/references/transicoes/mergulho-no-ponto.md",
+      "bytes": 755,
+      "sha256": "3bbc23ebe4c1ab38cfa773d97cea736420d4952f49ddf991e1be8311ecee8030"
+    },
+    {
+      "path": "skills/deck-cinematografico/references/transicoes/orbita-em-profundidade.md",
+      "bytes": 920,
+      "sha256": "906d66360b0513591130e27d8af7e069df97fd266c375eb1bcb352c4b9e0b885"
+    },
+    {
+      "path": "skills/deck-cinematografico/references/transicoes/seta-impacto.md",
+      "bytes": 1455,
+      "sha256": "12407e30035f7eddb3b067de2bb7778b8ba659366f770de2280c5aec55b2a8f9"
+    },
+    {
+      "path": "skills/deck-cinematografico/references/transicoes/tracos-desenham-forma.md",
+      "bytes": 1920,
+      "sha256": "e26931e4e58d0ea939749e4b659d4949e6140748bb251976b0ceedb9daa3fe6b"
+    },
+    {
+      "path": "skills/deck-cinematografico/references/transicoes/virar-pagina-inclinada.md",
+      "bytes": 594,
+      "sha256": "605ed64da4496daa1cfbaaf90943982d9e53045679497d6a5e7f7e98a664c349"
+    },
+    {
+      "path": "skills/deck-cinematografico/references/verificacao.md",
+      "bytes": 953,
+      "sha256": "a80aa241ccfb45cfaf6f235f4e135330e5fb8a66f78a1340f54eb0494791b466"
+    },
+    {
+      "path": "skills/deck-cinematografico/scripts/novo-deck.sh",
+      "bytes": 2227,
+      "sha256": "eee3db5975c52be3c6064d4549a53230482303535fe3f888ef79addc3363a2a3"
+    },
+    {
+      "path": "skills/deck-cinematografico/template/apresentar.command",
+      "bytes": 539,
+      "sha256": "2c6ec006963e2b1d8b8b0bc5ba58248a1b0e9b73664b1eda36975d2d1f5b7397"
+    },
+    {
+      "path": "skills/deck-cinematografico/template/direcoes.html",
+      "bytes": 14150,
+      "sha256": "31a1a43501dbc101008e0c896c3360202af3c43078467bbdb81bce7460b722d3"
+    },
+    {
+      "path": "skills/deck-cinematografico/template/index.html",
+      "bytes": 5002,
+      "sha256": "5542bdda296c8ec5cb9d10d9b48d11bdc5c45dff29eb88d6b8c9081c729a17d2"
+    },
+    {
+      "path": "skills/deck-cinematografico/template/motor.js",
+      "bytes": 12203,
+      "sha256": "959df91cb907747ea0ba27cae2e2150482a82d08086e48423cc4d51fd032525a"
+    },
+    {
+      "path": "skills/deck-cinematografico/template/planos/01-exemplo-pergunta.js",
+      "bytes": 2077,
+      "sha256": "50a3752fefa496d4edee107f1011318102c557ebd39439d2022344c4d762c63d"
+    },
+    {
+      "path": "skills/deck-cinematografico/template/planos/02-exemplo-forma.js",
+      "bytes": 3785,
+      "sha256": "0084ee3c40e9786c130e041fee8b8f1af271ca603a27af052110b960ee2c5828"
+    },
+    {
+      "path": "skills/deck-cinematografico/template/revisao.html",
+      "bytes": 12420,
+      "sha256": "8f9de216ad241f9f82168533a3df29a1a7a277d32664daf8f6ed604ed1accb44"
+    },
+    {
+      "path": "skills/deck-cinematografico/template/roteiro.js",
+      "bytes": 1941,
+      "sha256": "55bcb7496218cd01790fc2f2e242ade810976602ef10e9e16e42071552a9fb47"
+    },
+    {
+      "path": "skills/deck-cinematografico/template/scripts/_pagina.cjs",
+      "bytes": 838,
+      "sha256": "074528f95cab16102f805ee73720c5f662fa7ae2eb0fccf711a96f86dbec1bdf"
+    },
+    {
+      "path": "skills/deck-cinematografico/template/scripts/ajustar-duracao.cjs",
+      "bytes": 566,
+      "sha256": "4a6aa99ecb397a32343a0b7674eb84038d4436a99f2d2973254b34b39a0cb8f5"
+    },
+    {
+      "path": "skills/deck-cinematografico/template/scripts/aplicar-identidade.mjs",
+      "bytes": 2418,
+      "sha256": "b3d3068fde841e09957aca2bba094ed9e783ca54c5cf9c96af813d5e1a8818d6"
+    },
+    {
+      "path": "skills/deck-cinematografico/template/scripts/baixar-fontes.mjs",
+      "bytes": 1935,
+      "sha256": "8bdfce62baa9c1f6f6a11a34755110eacae9b6058359cb8e3adf43da7d507798"
+    },
+    {
+      "path": "skills/deck-cinematografico/template/scripts/folha.py",
+      "bytes": 559,
+      "sha256": "c0dc4af5d97336ee05a1c2cc24e342f62c397dd22f8cacc24d16ad0d88c71b0e"
+    },
+    {
+      "path": "skills/deck-cinematografico/template/scripts/gerar-cola.mjs",
+      "bytes": 1215,
+      "sha256": "6f1404efdcccd300c8d6e8f2922b4c1394ab23d41d0bd877c44c56c5323e27f1"
+    },
+    {
+      "path": "skills/deck-cinematografico/template/scripts/meios.cjs",
+      "bytes": 661,
+      "sha256": "4fa5c4340c9c9f1824d7cf08c75b3c05cc59ea56fd2034f45f08d669db36826f"
+    },
+    {
+      "path": "skills/deck-cinematografico/template/scripts/shoot-frames.cjs",
+      "bytes": 647,
+      "sha256": "9ac5ee7afa39fcab203991a152bc9a915f45504ae12aa6ba714bc9161c184e4c"
+    },
+    {
+      "path": "skills/deck-cinematografico/template/scripts/snap-t.cjs",
+      "bytes": 407,
+      "sha256": "f4d97059624bd8bd61754bf3fc8cac1e78b0e16d145567c092681c7a36ec2173"
+    },
+    {
+      "path": "skills/deck-cinematografico/template/scripts/snap.cjs",
+      "bytes": 597,
+      "sha256": "9f702fcf7223498f02620400e9fe03a5b1cd1935dbbd6c4707657850d2fd4931"
+    },
+    {
+      "path": "skills/deck-cinematografico/template/scripts/test-present.cjs",
+      "bytes": 1092,
+      "sha256": "86c6c06a14edc1dc67b628341b3c7d2bdab040f5e383d86fa4fd58e72191d518"
+    },
+    {
+      "path": "skills/deck-cinematografico/template/storyboard.html",
+      "bytes": 11641,
+      "sha256": "ad3122aa3a3af294fb7f076a38e0b4a9be651e7713d307082c69b9abb1dbdedd"
+    },
+    {
+      "path": "skills/deck-cinematografico/template/storyboard.js",
+      "bytes": 1541,
+      "sha256": "d3930a63807f9d59a8ae3efe46255f0e1078bce329fa45ea8f15a4f54d7581c0"
     },
     {
       "path": "skills/motion-design/README.md",
@@ -504,13 +765,13 @@
     },
     {
       "path": "tests/README.md",
-      "bytes": 1093,
-      "sha256": "20487651abe57f96848c13214ea5fc0d9849c196fdfc5fc6b629ec284e2b60c3"
+      "bytes": 1091,
+      "sha256": "91b5b5fa30a983ca434a2ea3dbc81d8703c584b865a27790cb19952a4cf1282f"
     },
     {
       "path": "tests/test_bundle.py",
-      "bytes": 3947,
-      "sha256": "9d6cedfed58bc2a7fb641c04c4bec36111469e6c906fbf8116a3a354d4f55cf8"
+      "bytes": 3966,
+      "sha256": "8481a0562b11197df8e24837e73b211194bc0ae2b8f7a1bf04069b5ae675a036"
     },
     {
       "path": "tests/test_scripts.py",

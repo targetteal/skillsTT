@@ -12,6 +12,7 @@ verificado antes de publicar.
 | `tt-instagram` | Mesmo pacote, `skills/tt-instagram` | 0.1.0 | Nenhuma |
 | `motion-design` | Instalação de agente da skill que vive no repositório privado `targetteal/c.a.m`, em `.claude/skills/motion-design/`, commit `08e076a` | 1.1.0 | Removida a maquinaria interna (ver abaixo) e atualizada a seção de instalação do `README.md` |
 | `clubett-identidade-visual` | Repositório público `targetteal/clubett-identidade-visual`, commit `3dc5ed9` | sem versão declarada | Nenhuma. Cópia idêntica |
+| `deck-cinematografico` | Criada por Ravi Resck a partir de um filme real de workshop com cliente (set. 2026); instalação local do agente | 1.0.0 | Não publicada a pasta `examples/` (ver abaixo); GSAP e fontes não são redistribuídos |
 
 ## Verificação do pacote TT Skills 0.1.0
 
@@ -57,6 +58,14 @@ detalhes de sincronização entre repositórios:
 O método, as referências, o template, o exemplo e o `scripts/new-video.sh`
 publicados são os do repositório upstream, sem alteração de conteúdo.
 
+### Arquivos de `deck-cinematografico` não publicados
+
+| Arquivo | Por que ficou fora |
+|---|---|
+| `examples/` (caso real) | Contém conteúdo confidencial de cliente: roteiro, falas, títulos de achados e a composição original. As lições daquele caso estão generalizadas em `references/armadilhas.md`, `references/passe-cinematografico.md` e nas fichas de transição |
+
+A skill foi escrita sem nomes de cliente; os exemplos do template usam conteúdo fictício. A biblioteca de transições (`references/transicoes/`) foi feita para crescer: cada projeto acrescenta fichas novas na fase de colheita.
+
 ## Manutenção
 
 `clubett-identidade-visual` e `motion-design` também existem nos seus
@@ -69,3 +78,7 @@ As três skills `tt-*` têm este repositório como origem.
 O template de vídeo declara dependências de Node (`package.json` e
 `package-lock.json`) com as licenças dos respectivos autores. Nenhum arquivo de
 fonte tipográfica é distribuído aqui.
+
+`deck-cinematografico` baixa, na criação de cada projeto e a partir das fontes oficiais, o GSAP 3.14.2
+(jsDelivr, licença GreenSock) e as fontes do Google Fonts declaradas na identidade (licenças dos
+autores), e usa a CLI do HyperFrames via `npx`. Nada disso é copiado para este repositório.

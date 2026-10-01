@@ -1,0 +1,12 @@
+{
+  "nome": "Ensaio",
+  "descricao": "Revista de ensaio (Monocle/Kinfolk): serifa grande e elegante, itálico no acento, papel com grão, fios finos, cabeçalho com Nº. Origem: filme de workshop com cliente, 2026.",
+  "cores": { "papel": "#ECE5D5", "papel_claro": "#F1EBDD", "papel_escuro": "#E2D9C5", "tinta": "#1A1916", "suave": "#4D493F", "acento": "#A63F28", "categorias": ["#23806b", "#db6a4b", "#d5a038"] },
+  "fontes": {
+    "display": { "familia": "Instrument Serif", "google": "Instrument+Serif:ital@0;1", "pilha": "Georgia, serif", "peso": 400, "espacamento": "-0.025em" },
+    "texto": { "familia": "Newsreader", "google": "Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800", "pilha": "Georgia, serif" },
+    "mono": { "familia": "JetBrains Mono", "google": "JetBrains+Mono:wght@300..700", "pilha": "ui-monospace, monospace" }
+  },
+  "textura": { "grao": 0.6 },
+  "movimento": { "respiracao": 1 }
+}

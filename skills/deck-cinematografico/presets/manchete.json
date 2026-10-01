@@ -1,0 +1,12 @@
+{
+  "nome": "Manchete",
+  "descricao": "Capa de revista: fundo escuro, grotesca condensada enorme em caixa alta, blocos de cor chapada. Impactante; pode ser agressivo para salas de liderança.",
+  "cores": { "papel": "#121211", "papel_claro": "#1B1B19", "papel_escuro": "#0B0B0A", "tinta": "#F1EBDD", "suave": "#A8A294", "acento": "#E8613C", "categorias": ["#1E8A72", "#E8613C", "#E9A92F"] },
+  "fontes": {
+    "display": { "familia": "Archivo", "google": "Archivo:wdth,wght@62..125,100..900", "pilha": "Helvetica Neue, sans-serif", "peso": 820, "estiramento": "62%", "caixa": "uppercase", "espacamento": "-0.005em" },
+    "texto": { "familia": "Newsreader", "google": "Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800", "pilha": "Georgia, serif" },
+    "mono": { "familia": "JetBrains Mono", "google": "JetBrains+Mono:wght@300..700", "pilha": "ui-monospace, monospace" }
+  },
+  "textura": { "grao": 0.25 },
+  "movimento": { "respiracao": 1 }
+}

@@ -15,7 +15,7 @@ import yaml
 
 ROOT = Path(__file__).resolve().parents[1]
 TT_SKILLS = ['tt-editorial', 'tt-instagram', 'tt-visual']
-ALL_SKILLS = ['clubett-identidade-visual', 'motion-design',
+ALL_SKILLS = ['clubett-identidade-visual', 'deck-cinematografico', 'motion-design',
               'tt-editorial', 'tt-instagram', 'tt-visual']
 
 
@@ -75,7 +75,7 @@ class TestBundle(unittest.TestCase):
         self.assertGreaterEqual(len(data['cases']), 12)
         self.assertEqual(len({c['id'] for c in data['cases']}), len(data['cases']))
 
-    def test_all_five_skills_have_a_skill_file(self):
+    def test_all_skills_have_a_skill_file(self):
         names = sorted(p.parent.name for p in (ROOT / 'skills').glob('*/SKILL.md'))
         self.assertEqual(names, ALL_SKILLS)
 

@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Storyboard em rascunho</title>
+<script src="roteiro.js"></script>
+<script>
+/* Kit de rascunho: cada função devolve SVG (viewBox 0 0 480 270 = 1920×1080 ÷ 4).
+ * Rascunho valida composição, ordem, texto e movimento. Não é arte final. */
+window.K = {
+  texto: (x, y, t, tam = 14, o = {}) => `<text x="${x}" y="${y}" class="t" font-size="${tam}"${o.fim ? ' text-anchor="end"' : o.meio ? ' text-anchor="middle"' : ""}${o.acento ? ' fill="var(--a)"' : ""}>${t}</text>`,
+  titulo: (x, y, linhas, tam = 22, o = {}) => linhas.map((l, i) => K.texto(x, y + i * tam * 1.05, l, tam, o)).join(""),
+  rabisco: (x, y, w, linhas = 3, gap = 8) => Array.from({ length: linhas }, (_, i) => `<path class="l fino" d="M${x} ${y + i * gap} h${w * (i === linhas - 1 ? .6 : 1)}"/>`).join(""),
+  caixa: (x, y, w, h, o = {}) => `<rect x="${x}" y="${y}" width="${w}" height="${h}" class="l${o.acento ? " a" : ""}${o.cheio ? " cheio" : ""}"/>`,
+  linha: (x1, y1, x2, y2, o = {}) => `<path class="l${o.acento ? " a" : ""}${o.tracejado ? " tr" : ""}" d="M${x1} ${y1} L${x2} ${y2}"/>`,
+  caminho: (d, o = {}) => `<path class="l${o.acento ? " a" : ""}${o.tracejado ? " tr" : ""}" d="${d}"/>`,
+  seta: (x1, y1, x2, y2, o = {}) => { const a = Math.atan2(y2 - y1, x2 - x1), h = 7; return `<path class="l${o.acento ? " a" : ""}" d="M${x1} ${y1} L${x2} ${y2} M${x2 - h * Math.cos(a - .5)} ${y2 - h * Math.sin(a - .5)} L${x2} ${y2} L${x2 - h * Math.cos(a + .5)} ${y2 - h * Math.sin(a + .5)}"/>`; },
+  circulo: (x, y, r, o = {}) => `<circle cx="${x}" cy="${y}" r="${r}" class="l${o.acento ? " a" : ""}${o.cheio ? " cheio" : ""}"/>`,
+  pontos: (n, x, y, w, h, seed = 1) => { let s = seed, r = () => (s = (s * 9301 + 49297) % 233280) / 233280; return Array.from({ length: n }, () => `<circle cx="${(x + r() * w).toFixed(1)}" cy="${(y + r() * h).toFixed(1)}" r="1.4" class="p"/>`).join(""); },
+  pessoa: (x, y, s = 1) => `<g transform="translate(${x} ${y}) scale(${s})"><circle cx="0" cy="-16" r="6" class="l"/><path class="l" d="M-10 8 Q0 -8 10 8"/></g>`,
+  camera: (x, y, w, h, rotulo = "câmera") => `<rect x="${x}" y="${y}" width="${w}" height="${h}" class="cam"/><text x="${x + 4}" y="${y - 4}" class="nota" font-size="9">${rotulo}</text>`,
+  nota: (x, y, t) => `<text x="${x}" y="${y}" class="nota" font-size="10">${t}</text>`,
+  cabecalho: (n) => `<path class="l fino" d="M24 27 H456"/><text x="24" y="22" class="nota" font-size="7">CABEÇALHO</text><text x="456" y="22" class="nota" font-size="7" text-anchor="end">Nº ${n}</text>`
+};
+</script>
+<script src="storyboard.js"></script>
+<style>
+  :root{--p:#F4F1EA;--i:#3a3a38;--a:#b4532f;--m:#8a877e}
+  *{box-sizing:border-box} body{margin:0;background:#e9e6de;color:#2b2b29;font:14px/1.5 -apple-system,system-ui,sans-serif}
+  header{position:sticky;top:0;z-index:5;background:#e9e6de;border-bottom:1px solid #d3cfc4;padding:14px 28px;display:flex;gap:16px;align-items:center}
+  header h1{font:500 20px Georgia,serif;margin:0} header .sp{flex:1}
+  button{font:inherit;padding:7px 14px;border-radius:8px;border:1px solid #bcb7aa;background:#fff;cursor:pointer} button.pri{background:#2b2b29;color:#fff;border-color:#2b2b29}
+  .aviso{margin:18px 28px 0;font-size:13px;color:#5d5a52}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(520px,1fr));gap:26px 20px;padding:22px 28px 120px}
+  .sec{grid-column:1/-1;font:500 24px Georgia,serif;margin-top:12px;border-bottom:1px solid #d3cfc4;padding-bottom:6px}
+  .q{background:#fbfaf6;border:1px solid #d3cfc4;border-radius:10px;padding:12px;position:relative}
+  .q.aprovado{outline:3px solid #6F9A5B} .q.ajustar{outline:3px solid #B7792B} .q.cortar{outline:3px solid #9A4B3F;opacity:.55}
+  .q .hd{display:flex;justify-content:space-between;font-size:12px;color:var(--m);margin-bottom:6px} .q .hd b{color:#2b2b29}
+  .trans{font-size:12px;color:var(--a);margin:0 0 6px;font-style:italic} .trans:before{content:"↳ "}
+  svg.f{width:100%;aspect-ratio:16/9;display:block;background:var(--p);border:1px solid #cfcabd}
+  svg.f .l{fill:none;stroke:var(--i);stroke-width:1.3;stroke-linecap:round;stroke-linejoin:round} svg.f .l.fino{stroke-width:.8;opacity:.6}
+  svg.f .l.a{stroke:var(--a)} svg.f .l.tr{stroke-dasharray:4 4} svg.f .cheio{fill:rgba(58,58,56,.12)} svg.f .l.a.cheio{fill:rgba(180,83,47,.18)}
+  svg.f .t{fill:var(--i);font-family:"Bradley Hand","Segoe Print","Comic Sans MS",cursive} svg.f .p{fill:var(--i)}
+  svg.f .nota{fill:var(--m);font-family:"Bradley Hand",cursive;font-style:italic} svg.f .cam{fill:none;stroke:#3b6fb6;stroke-width:1.2;stroke-dasharray:6 4}
+  svg.f .lapis{filter:url(#lapis)}
+  .info{font-size:12.5px;margin-top:8px;display:grid;gap:3px} .info .c:before{content:"▸ ";color:#3b6fb6} .info .v:before{content:"“ ";color:var(--a)}
+  .acts{display:flex;gap:6px;margin-top:8px} .acts button{padding:3px 9px;font-size:12px} .acts button.on[data-s=aprovado]{background:#6F9A5B;color:#fff} .acts button.on[data-s=ajustar]{background:#B7792B;color:#fff} .acts button.on[data-s=cortar]{background:#9A4B3F;color:#fff}
+  textarea{width:100%;margin-top:6px;border:1px dashed #cfcabd;border-radius:6px;background:transparent;font:inherit;font-size:12.5px;padding:5px 7px;min-height:34px}
+  #anim{position:fixed;inset:0;background:#141412;display:none;align-items:center;justify-content:center;z-index:20;flex-direction:column;gap:14px}
+  #anim svg{width:min(92vw,160vh);aspect-ratio:16/9;background:var(--p)} #anim .leg{color:#ddd;font-size:14px} #anim .leg i{color:#e9a27f}
+  dialog{border:0;border-radius:12px;width:min(820px,90vw);padding:0} dialog pre{margin:0;padding:18px;max-height:70vh;overflow:auto;white-space:pre-wrap;font-size:12.5px}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute"><filter id="lapis"><feTurbulence type="fractalNoise" baseFrequency=".035" numOctaves="2" seed="4"/><feDisplacementMap in="SourceGraphic" scale="2.2"/></filter></svg>
+<header><h1 id="tt"></h1><span style="font-size:13px;color:#6b685f">storyboard em rascunho</span><span class="sp"></span>
+  <button id="play">▶ Animatic</button><button class="pri" id="copy">Copiar resultado</button><button id="view">Ver</button></header>
+<p class="aviso">Rascunho para validar <b>composição, ordem, texto e movimento</b>. A arte final segue a direção visual aprovada. Cada quadro é uma parada (um clique); o texto em laranja é a transição que leva até ele.</p>
+<div class="grid" id="g"></div>
+<div id="anim"><svg viewBox="0 0 480 270" id="asv"></svg><div class="leg" id="aleg"></div></div>
+<dialog id="dlg"><pre id="out"></pre></dialog>
+<script>
+const R = window.ROTEIRO, SK = window.SKETCH || {}, KEY = "storyboard-" + R.titulo;
+document.getElementById("tt").textContent = R.titulo;
+let S = JSON.parse(localStorage.getItem(KEY) || "{}"); S.st ??= {}; S.c ??= {};
+const save = () => localStorage.setItem(KEY, JSON.stringify(S));
+const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+const Q = []; let n = 0;
+R.planos.forEach(p => p.beats.forEach((b, i) => { n++; const k = `${p.id}.${i + 1}`; const s = SK[k]; Q.push({ n, k, p, b, i, svg: typeof s === "function" ? s(K) : (s || K.nota(180, 135, "(sem rascunho)")) }); }));
+let sec = "", h = "";
+Q.forEach(q => {
+  if (q.p.secao && q.p.secao !== sec) { sec = q.p.secao; h += `<div class="sec">${esc(sec)}</div>`; }
+  if (q.i === 0 && q.p.pausa) h += `<div class="sec" style="font-size:16px;color:#b4532f">Pausa: ${esc(q.p.pausa)}</div>`;
+  const st = S.st[q.k] || "";
+  h += `<div class="q ${st}" id="q-${q.n}"><div class="hd"><span><b>Clique ${q.n}</b> · ${esc((q.p.numero ? q.p.numero + " " : "") + q.p.titulo)} ▶${q.i + 1}</span><span>${q.b.dur ?? "?"} s + ${q.b.hold ?? 2.4} s</span></div>
+    ${q.b.transicao ? `<p class="trans">${esc(q.b.transicao)}</p>` : ""}
+    <svg class="f" viewBox="0 0 480 270"><g class="lapis">${q.svg}</g></svg>
+    <div class="info">${q.b.desc ? `<div>${esc(q.b.desc)}</div>` : ""}${q.i === 0 && q.p.camera ? `<div class="c">${esc(q.p.camera)}</div>` : ""}${(q.b.fala || (q.i === 0 && q.p.fala)) ? `<div class="v">${esc(q.b.fala || q.p.fala)}</div>` : ""}</div>
+    <div class="acts">${["aprovado", "ajustar", "cortar"].map(s => `<button data-s="${s}" data-k="${q.k}" class="${st === s ? "on" : ""}">${{ aprovado: "✓", ajustar: "Ajustar", cortar: "Cortar" }[s]}</button>`).join("")}</div>
+    <textarea data-c="${q.k}" placeholder="Comentário sobre este quadro…">${esc(S.c[q.k] || "")}</textarea></div>`;
+});
+document.getElementById("g").innerHTML = h;
+document.addEventListener("click", e => { const b = e.target.closest(".acts button"); if (!b) return; const k = b.dataset.k;
+  S.st[k] = S.st[k] === b.dataset.s ? undefined : b.dataset.s; if (!S.st[k]) delete S.st[k]; save();
+  const box = b.closest(".q"); box.className = "q " + (S.st[k] || ""); box.querySelectorAll(".acts button").forEach(x => x.classList.toggle("on", x.dataset.s === S.st[k])); });
+document.addEventListener("input", e => { if (e.target.dataset.c) { S.c[e.target.dataset.c] = e.target.value; save(); } });
+const result = () => { const L = [`# Storyboard · ${R.titulo}`, ""]; Q.forEach(q => { const st = S.st[q.k], c = (S.c[q.k] || "").trim(); if (st || c) L.push(`- Clique ${q.n} (${q.p.titulo} ▶${q.i + 1}): ${st ? st.toUpperCase() : "sem status"}${c ? " · " + c : ""}`); });
+  const sem = Q.filter(q => !S.st[q.k]).map(q => q.n); L.push("", sem.length ? `Sem decisão: cliques ${sem.join(", ")}` : "Todos os quadros decididos."); return L.join("\n"); };
+document.getElementById("copy").onclick = async () => { try { await navigator.clipboard.writeText(result()); document.getElementById("copy").textContent = "Copiado ✓"; setTimeout(() => document.getElementById("copy").textContent = "Copiar resultado", 2000); } catch { document.getElementById("out").textContent = result(); document.getElementById("dlg").showModal(); } };
+document.getElementById("view").onclick = () => { document.getElementById("out").textContent = result(); document.getElementById("dlg").showModal(); };
+document.getElementById("dlg").onclick = e => { if (e.target.id === "dlg") e.target.close(); };
+// Animatic: os quadros em sequência com o tempo de cada beat (espaço pausa, Esc sai)
+let ai = 0, at = null, pausado = false;
+const anim = document.getElementById("anim"), asv = document.getElementById("asv"), leg = document.getElementById("aleg");
+const mostra = i => { const q = Q[i]; asv.style.transition = "none"; asv.style.opacity = 0; asv.innerHTML = `<g class="lapis">${q.svg}</g>`; asv.querySelectorAll(".l,.t,.p,.nota,.cam,.cheio").forEach(() => {}); requestAnimationFrame(() => { asv.style.transition = "opacity .45s"; asv.style.opacity = 1; }); leg.innerHTML = `Clique ${q.n} · ${esc(q.p.titulo)} ▶${q.i + 1}${q.b.transicao ? ` · <i>${esc(q.b.transicao)}</i>` : ""}`; };
+const passo = () => { if (pausado) return; if (ai >= Q.length) return fecha(); mostra(ai); const q = Q[ai]; ai++; at = setTimeout(passo, ((q.b.dur ?? 2.5) + Math.min(q.b.hold ?? 2.4, 2)) * 1000); };
+const fecha = () => { clearTimeout(at); anim.style.display = "none"; };
+document.getElementById("play").onclick = () => { ai = 0; pausado = false; anim.style.display = "flex"; asv.classList.add("f"); passo(); };
+addEventListener("keydown", e => { if (anim.style.display !== "flex") return; if (e.key === "Escape") fecha(); if (e.key === " ") { e.preventDefault(); pausado = !pausado; if (!pausado) passo(); else clearTimeout(at); } });
+anim.onclick = fecha;
+</script>
+</body>
+</html>
